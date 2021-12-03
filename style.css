@@ -30,6 +30,7 @@ h2{
 }
 
 .magasin_grid>div>p{
+	text-align: center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -204,6 +205,8 @@ input[type="radio"].demo5 {
 		height: 45rem;
 	}
 	.magasin_grid>div>p{
+		text-align: center;
+
 		position: absolute;
 		top: 50%;
 		left: 50%;
