@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
+	height: 100vh;
 }
 
 html{
-	background-image: url(https://www.outside.fr/wp-content/uploads/2019/11/bassin-d-argentiere.jpg);
 	font-size: 62.5%;
+	background-image: url(https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&w=1000&q=80);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 @font-face{
 	font-family: Bebas;
@@ -12,6 +16,9 @@ html{
 
 
 }
+
+
+
 
 h2{
 	width: 100%;
@@ -48,7 +55,7 @@ h2{
 	transition: all .3s;
 
 	height: 12rem;
-	background-color: rgb(140, 122, 158);
+	background-color: rgba(195, 187, 203, 0.482);
 }
 
 
@@ -110,7 +117,7 @@ main>div>input,main>div>label{
 
 
 main>div>input{
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 main>div>button{
@@ -143,6 +150,17 @@ main>div>#button{
 	line-height: 3rem;
 }
 
+
+.consent{
+	display: block;
+	margin: 0 auto;
+	padding-left: 3rem;
+}
+
+.consent>label{
+	font-size: 1.1rem;
+
+}
 .text_message_welcome{
 	text-align: center;
 	display: block;
@@ -202,7 +220,7 @@ input[type="radio"].demo5 {
 		margin: 12rem auto;
 		width: 90%;
 		background-color: rgba(255, 255, 255, 0.447);
-		height: 45rem;
+		height: 40rem;
 	}
 	.magasin_grid>div>p{
 		text-align: center;
