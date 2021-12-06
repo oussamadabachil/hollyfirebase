@@ -81,6 +81,9 @@
       measurementId: "G-SS2DCC94T8"
     };
 
+    var i=0;
+
+
     let text_mag = document.querySelector("h2")
     let mag_grid_show = document.querySelector(".magasin_grid")
     let choix_mag = ""
@@ -92,7 +95,7 @@
     let formshow = document.querySelector(".form_show")
     let welcome_message= document.querySelector(".text_message_welcome")
     welcome_message.style.display="none"
-  var i=0;
+    
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     // Initialize Firebase
@@ -171,7 +174,11 @@ magkrem.addEventListener("click",()=>{
     text_mag.textContent = choix_mag
 
 })
+if (sessionStorage.getItem("is_reloaded")){
+    var index_change = localStorage.getItem("index")
 
+    i=index_change;
+}
 
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
@@ -188,12 +195,24 @@ magkrem.addEventListener("click",()=>{
                 }
             }
 
-            if(((isNaN(document.querySelector("#name").value)&&(isNaN(document.querySelector("#nickname").value))))&&(document.querySelector("#mail").value.match(mailformat))){
 
             
+
+            if(((isNaN(document.querySelector("#name").value)&&(isNaN(document.querySelector("#nickname").value))))&&(document.querySelector("#mail").value.match(mailformat))){
+                sessionStorage.setItem("is_reloaded", true);
+     
+
+
+            var index_change = localStorage.getItem("index")
+            var i = 0;
                 i++;
+                index_change++
+            i =index_change
             const db = getDatabase();
-  set(ref(db, choix_mag+'  CLIENTS/  '+i ), {
+            localStorage.setItem('index', i);
+
+
+  set(ref(db, choix_mag+'  CLIENTS/  '+index_change ), {
     nom: document.querySelector("#name").value,
     prenom: document.querySelector("#nickname").value,
     email: document.querySelector("#mail").value,
