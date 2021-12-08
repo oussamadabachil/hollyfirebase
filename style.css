@@ -5,7 +5,7 @@ body {
 
 html{
 	font-size: 62.5%;
-	background-image: url(/streetpicresize.jpg);
+	background-image: url(./asset/streetpicresize.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
